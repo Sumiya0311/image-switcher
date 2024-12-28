@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Switcher</title>
+  <style>
+    .image-container {
+      width: 300px;
+      height: 300px;
+      border: 2px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="image-container" id="imageContainer">
+    <img src="https://www.woofern.com/public/uploads/all/GesRCjxu5FsifqpuystzbLX4El2LsgEqO7joO2JD.jpg" alt="Default Image" id="currentImage" width="500" height="300">
+  </div>
+
+  <div class="buttons">
+    <button onclick="changeImage('https://cdn.britannica.com/86/118186-050-2B615419/European-water-lily.jpg')">Lily</button>
+    <button onclick="changeImage('https://cms.interiorcompany.com/wp-content/uploads/2024/01/red-velvet-types-of-red-roses.jpg')">Rose</button>
+    <button onclick="changeImage('https://c3t6b9h6.delivery.rocketcdn.me/wp-content/uploads/2021/10/purple-aster.jpg')">Lavender</button>
+    <button onclick="changeImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5X6hhBD4NNeLSI82s2etaSKAbWPMPkXunlQ&s')">Petunia</button>
+  </div>
+
+  <script>
+    function changeImage(imageSrc) {
+      const imageElement = document.getElementById('currentImage');
+      imageElement.src = imageSrc;
+    }
+  </script>
+</body>
+</html>
